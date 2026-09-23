@@ -1,5 +1,8 @@
 # dbscan 1.2.6.1 (Unreleased)
 
+## Bugfixes
+* hdbscan() and dbcv(): fix integer overflow in distance indexing for more than 46340 points
+
 # dbscan 1.2.6 (2026-08-24)
 
 ## Changes
