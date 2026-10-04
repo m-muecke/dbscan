@@ -50,3 +50,12 @@ test_that("dbcv", {
   # (db <- dbcv(x, class, metric = "sqeuclidean"))
 
 })
+
+test_that("dbcv works with clusters that have a single internal node", {
+  # only the middle point of a size-3 cluster is internal
+  x <- rbind(cbind(c(0, .1, .2), 0), cbind(c(5, 5.1, 5.2), 0))
+  db <- dbcv(x, rep(1:2, each = 3))
+  expect_true(all(is.finite(db$dspc)))
+  # dsc = sqrt(1 / 62.5), dspc = 5
+  expect_equal(db$score, 1 - sqrt(1 / 62.5) / 5)
+})

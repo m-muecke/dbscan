@@ -10,6 +10,7 @@
   cluster assignments (by m-muecke)
 * OPTICS: Fixed calculation for epsilon when set to infinity.
 * predict() for dbscan, optics, and hdbscan objects now works with single-column data (by m-muecke)
+* dbcv() no longer returns NaN or an inflated score when two clusters both have a single internal node (e.g., clusters of size 3) (by m-muecke)
 
 # dbscan 1.2.6 (2026-08-24)
 

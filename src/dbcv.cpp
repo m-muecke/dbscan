@@ -232,7 +232,7 @@ NumericMatrix dspc(const List& cl_idx, const List& internal_nodes, const Integer
       // ignore clusters with no internal nodes! -> get infinity for minimum edge
       // this leads to a NaN and should not happen in this implementation since
       // we have already filtered out clusters of size < 3
-      if(i_idx.length() > 1 || j_idx.length() > 1) {
+      if(i_idx.length() > 0 && j_idx.length() > 0) {
 
         const IntegerVector rel_i_idx = match(as<IntegerVector>(cl_idx[ci]), all_cl_ids)[i_idx - 1];
         const IntegerVector rel_j_idx = match(as<IntegerVector>(cl_idx[cj]), all_cl_ids)[j_idx - 1];
