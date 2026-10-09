@@ -1,6 +1,8 @@
 # Changelog
 
-## dbscan 1.2.7 (2026-10-01)
+## dbscan 1.2.7 (2026-10-04)
+
+CRAN release: 2026-10-05
 
 ### Changes
 
